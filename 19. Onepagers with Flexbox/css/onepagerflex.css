@@ -1,0 +1,277 @@
+body {
+  margin: 0;
+  font-family: 'Alegreya Sans', sans-serif;
+  color: white;
+  text-shadow: 0 0 2px white, 0 0 6px black;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 1.3em;
+}
+
+h2 {
+  letter-spacing: 5px;
+  margin: 0;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.icon {
+  font-size: 40px;
+}
+
+.info a.fas {
+  font-size: 40px;
+}
+
+.flag-icon {
+  font-size: 40px;
+}
+
+.button {
+  line-height: 70px;
+  border: solid;
+  padding: 5px;
+  border-radius: 25px;
+}
+
+.button:hover {
+  background-color: #00000050;
+}
+
+a:hover {
+  text-shadow: 0 0 4px black;
+}
+
+.panel {
+  margin: 0;
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#top {
+  height: 100vh;
+}
+
+.info {
+  text-align: center;
+}
+
+.parallax {
+  display: flex;
+  padding: 10px;
+}
+
+.parallax p {
+  color: black;
+}
+
+.scroll {
+  font-size: 2em;
+  margin: 10px;
+  align-self: center;
+  flex: 0 0;
+}
+
+.statement h2 {
+  text-align: center;
+}
+
+#motto {
+  justify-content: center;
+}
+
+.statement {
+  margin: 10px;
+}
+
+.statement p i {
+  font-size: 3em;
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.guide {
+  margin: 10px;
+  flex: 1 1;
+}
+
+.guide img {
+  width: 100%;
+  height: auto;
+}
+
+#guides {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#guide-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+#contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+#contact div {
+  flex: 1 1;
+}
+
+#contact .scroll {
+  flex: 0 0;
+}
+
+#visit {
+  justify-content: space-between;
+  align-items: center;
+}
+
+iframe {
+  width: 50vw;
+}
+
+#menu {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  text-align: center;
+  background-color: #00000050;
+  padding: 15px;
+  font-size: 18px;
+}
+
+#links {
+  display: flex;
+  justify-content: space-around;
+  font-size: 24px;
+}
+
+#links.a {
+  display: inline-block;
+}
+
+#footer {
+  background-color: #00000070;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  width: 100vw;
+}
+
+#footer a{
+  text-decoration: underline;
+  margin: 5px
+}
+
+#links {
+  margin: 25px;
+}
+
+#top {
+  background-image: url('../images/sanfransisco.jpg');
+}
+
+#england {
+  background-image: url('../images/wiltshire.jpg');
+}
+
+#sweden {
+  background-image: url('../images/stockholm.jpg');
+}
+
+#france {
+  background-image: url('../images/paris.jpg');
+}
+
+#germany {
+  background-image: url('../images/berlin.jpg');
+}
+
+#cyberpunk {
+  background-image: url('../images/nightcity.jpg');
+}
+
+#italy {
+  background-image: url('../images/rome.jpg');
+}
+
+#china {
+  background-image: url('../images/china.jpg');
+}
+
+#message {
+  width: 30vw;
+}
+
+.icon {
+  display: none;
+}
+
+@media screen and (max-width: 1600px){
+  .scroll {
+    display: none;
+  }
+
+  #guide-container {
+    flex-wrap: wrap;
+  }
+
+  .guide {
+    flex: 1 1 48%;
+  }
+
+  #mission {
+    flex-wrap: wrap;
+  }
+
+  .statement {
+    flex: 1 1 48%;
+  }
+}
+
+@media screen and (max-width: 700px){
+  #menu #links {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #links  {
+    height: 200px;
+    display: none;
+  }
+
+  .icon {
+    display: block;
+  }
+}

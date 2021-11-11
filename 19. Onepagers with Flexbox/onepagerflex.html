@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <title>Onepagerflex</title>
+
+    <!-- Link to JQuery source code -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- JQuery for smooth scrolling -->
+    <script>
+        var offset = -52;
+        $(document).ready(function()
+        {
+            $("a").on('click', function(event)
+            {
+                if (this.hash !== "")
+                {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({ scrollTop: $(hash).offset().top + offset}, 800);
+                }
+            });
+        });
+
+
+// This will capture hash changes while on the page
+window.addEventListener("hashchange", offsetAnchor);
+
+// This is here so that when you enter the page with a hash,
+// it can provide the offset in that case too. Having a timeout
+// seems necessary to allow the browser to jump to the anchor first.
+window.setTimeout(offsetAnchor, 1); // The delay of 1 is arbitrary and may not always work right (although it did in my testing).
+    </script>
+
+    <script>
+      function hamburgerMenu() {
+        var x = document.getElementById("links");
+        if (x.style.display === "flex") {
+          x.style.display = "none";
+        }
+        else {
+          x.style.display = "flex";
+        }
+      }
+
+      function mobilanpassning(){
+        var x = document.getElementById("links");
+        if ($(window).width() > 683) {
+          x.style.display = 'flex'
+        }
+        else {
+          x.style.display = 'none'
+        }
+      }
+    </script>
+
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css' rel='stylesheet'>
+    <link href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet">
+
+    <link rel='stylesheet' type='text/css' href='css/onepagerflex.css'>
+  </head>
+
+  <body onresize="mobilanpassning()">
+    <div id='menu'>
+      <div id='links'>
+        <a href='#top'>Top</a>
+        <a href='#mission'>Statements</a>
+        <a href='#guides'>Guides</a>
+        <a href='#message'>Message</a>
+        <a href='#visit'>Visit</a>
+      </div>
+      <a href='javascript:void(0);' class='icon' onclick='hamburgerMenu()'>&#9776;</a>
+    </div>
+
+    <div class='panel' id='top'>
+      <div class='info'>
+        <i class="fas fa-plane-departure icon"></i><br>
+        <h2>Experience the world</h2>
+        The World is Waiting for You<br>
+        <a href='#mission' class='fas fa-angle-down'></a>
+      </div>
+    </div>
+
+    <div class='parallax' id='motto'>
+      <h2>Travel with us</h2>
+    </div>
+
+    <div class='panel' id='england'>
+    </div>
+
+    <div class='parallax' id='mission'>
+      <div class='scroll'>
+        <a href='#top' class='fas fa-angle-up'></a><br>
+        <a href=#guides class='fas fa-angle-down'></a>
+      </div>
+
+      <div class='statement'>
+        <h2>Our Mission</h2>
+
+        <p><i class="fas fa-landmark"></i>Pellentesque et mollis dolor. Donec congue et elit ac tincidunt. In sed lacus imperdiet, lobortis purus et, vulputate leo. Nam ut interdum leo. Aenean nec turpis id purus dignissim efficitur vitae eu mi. Sed eget ligula ut enim mollis facilisis. Integer mollis urna sem, et fermentum dui malesuada in. Aliquam at ipsum porta, lacinia nulla vel, ullamcorper nulla. Aliquam commodo libero mi, in ornare neque pellentesque sed. Nulla eu lacinia urna. Mauris semper turpis sed ultrices viverra. Suspendisse ut mi placerat, sodales tellus in, pellentesque urna.</p>
+      </div>
+
+      <div class='statement'>
+        <h2>Our Goal</h2>
+
+        <p><i class="fas fa-wallet"></i>Aliquam venenatis nec tortor ut egestas. Nullam tristique, quam a maximus luctus, leo sem rutrum nunc, in condimentum risus metus nec enim. In eros turpis, lobortis eget iaculis sed, finibus nec ante. Duis dictum sollicitudin augue eget sodales. Yankee with no brim. Suspendisse ut ornare augue. Suspendisse ullamcorper ligula et mauris viverra, id elementum libero eleifend. Maecenas rutrum nunc non blandit tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vulputate dapibus enim, vitae aliquet nunc volutpat at. Curabitur a nibh nisl. Sed semper mauris non mauris elementum, eget pulvinar augue consectetur.</p>
+
+      </div>
+    </div>
+
+    <div class='panel' id='sweden'>
+    </div>
+
+    <div class='parallax' id='guides'>
+      <h2>Our Guides</h2>
+
+      <div id='guide-container'>
+        <div class='scroll'>
+          <a href='#mission' class='fas fa-angle-up'></a><br>
+          <a href=#contact class='fas fa-angle-down'></a>
+        </div>
+
+        <div class='guide'>
+          <img alt='' src='images/business1.png'>
+          <p>Cras ac lectus eu lorem tempor tristique suscipit eget lorem. Aliquam dapibus ante pharetra porttitor ullamcorper. Aliquam tempus lacus in dolor accumsan pellentesque. Aliquam vitae sapien neque. Donec dapibus varius ipsum, nec sollicitudin lacus. Quisque egestas libero sit amet nulla mattis sollicitudin et nec nulla. Maecenas malesuada ipsum tellus. Sed efficitur tristique purus sit amet imperdiet. Morbi et tincidunt massa. Phasellus dui nunc, egestas vel sodales et, pharetra molestie dui. Morbi sapien orci, tempus ut erat dictum, interdum dignissim nisl. Sed dignissim commodo odio, vel feugiat quam fringilla vel. Suspendisse cursus nisl nec mollis condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        </div>
+
+        <div class='guide'>
+          <img alt='' src='images/business2.png'>
+          <p>Vivamus sit amet faucibus elit. Morbi nec gravida neque, id tempor sem. Vivamus eu sollicitudin ex. Morbi id accumsan ex. Morbi congue hendrerit feugiat. Pellentesque ut odio vitae enim commodo tincidunt at id ante. Nulla facilisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus vel ipsum tristique leo consectetur commodo sed eget nunc. Curabitur non porta nulla. Quisque efficitur luctus blandit. Ut quis aliquet ligula, nec varius libero. In volutpat erat nulla, a lobortis ipsum facilisis nec. Sed ipsum diam, feugiat eget ipsum sit amet, cursus congue neque.</p>
+        </div>
+
+        <div class='guide'>
+          <img alt='' src='images/business3.png'>
+          <p>Donec rhoncus tempor neque, vel viverra dolor ultrices tristique. Pellentesque rutrum risus neque, tempus mollis sapien sollicitudin non. Nunc non nulla eget neque fringilla cursus. Praesent pretium velit eget odio imperdiet mattis. Sed sem libero, sodales quis auctor rhoncus, tincidunt eget sem. Nulla luctus pellentesque tortor et consectetur. Curabitur cursus elit felis, quis varius risus varius sit amet. Aenean rhoncus lacus arcu, at porttitor nisl varius sed. Nunc venenatis venenatis venenatis. Vivamus eu elementum nisl, id tempor massa. In vitae erat eget lorem fringilla semper sit amet in enim.</p>
+        </div>
+
+        <div class='guide'>
+          <img alt='' src='images/business4.png'>
+          <p>Donec ac neque eu nunc porttitor convallis at in quam. Sed tincidunt facilisis nulla quis imperdiet. Vivamus et tempus nisl, a ullamcorper mi. Morbi eget condimentum ligula. Quisque vitae justo elementum, condimentum tellus vitae, tempus diam. Cras sed nibh at risus malesuada congue. Quisque tincidunt est ipsum, eget tempus arcu vestibulum ut. Sed gravida auctor dui. Nam at augue non tortor iaculis condimentum. In hac habitasse platea dictumst. Nulla condimentum et libero non faucibus.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class='panel' id='france'>
+    </div>
+
+    <div class='parallax' id='contact'>
+      <div class='scroll'>
+        <a href='#top' class='fas fa-angle-up'></a><br>
+        <a href=#sweden class='fas fa-angle-down'></a>
+      </div>
+      <h2>Send A Message</h2>
+      <div id='contact-info'>
+        <p>
+          Name:<br>
+          <input type='text'>
+        </p>
+        <p>
+          Email:<br>
+          <input type='text'>
+        </p>
+      </div>
+      <div id='contact-message'>
+        <p>
+          Message:<br>
+          <textarea id='message' rows='7'></textarea>
+        </p>
+      </div>
+    </div>
+
+    <div class='panel' id='germany'>
+    </div>
+
+    <div class='parallax' id='visit'>
+      <div class='scroll'>
+        <a href='#top' class='fas fa-angle-up'></a><br>
+        <a href=#sweden class='fas fa-angle-down'></a>
+      </div>
+      <h2>Visit Us</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.2431666262596!2d13.175968115928578!3d55.70214488053981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465397ded38dcf73%3A0x8f3868f1d33a6044!2sPolhemskolan!5e0!3m2!1ssv!2sse!4v1587538089295!5m2!1ssv!2sse" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+
+    <div class='panel' id='china'>
+
+      <div id='footer'>
+        <div id='used-links'>
+          <a href='https://github.com/lipis/flag-icon-css' target='_blank'>
+            <span class='fas fa-flag'></span>flag-icon-css
+          </a>
+
+          <a href='https://fontawesome.com' target='_blank'>
+            <span class='fab fa-font-awesome-flag'></span>font awesome
+          </a>
+
+          <a href='https://jquery.com' target='_blank'>
+            <span class='fas fa-bolt'></span>jQuery
+          </a>
+
+          <a href='https://fonts.google.com' target='_blank'>
+            <span class='fab fa-google'></span>oogle
+          </a>
+
+          <a href='https://youtu.be/ZcLqQZxpz_4?t=31' target='_blank'>
+            <span class='fa fa-copyright'></span>Bapelsin Software AB
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
